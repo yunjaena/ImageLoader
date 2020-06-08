@@ -53,7 +53,7 @@ ImageLoadListener imageLoadListener = new ImageLoadListener() {
 
       @Override
       public void onImageFailed(ImageFailedType failedType) {
-          ToastUtil.getInstance().makeShort(failedType.name());
+          Toast.makeText(this.getApplicationContext(), failedType.name(), Toast.LENGTH_SHORT).show();
       }
   };
 ```
