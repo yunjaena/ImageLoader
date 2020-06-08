@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/main_camera_multiple_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_image_from_camera"
+            android:textAllCaps="true"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/main_gallery_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_image_from_gallery"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/main_gallery_multiple_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_image_from_gallery_multiple"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/main_select_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_gallery_or_camera_dialog"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/main_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="saved_failed">save failed</string>
+    <string name="need_write_permission_title">write permission</string>
+    <string name="okay">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">select</string>
+    <string name="select_gallery_or_camera">Select Gallery or Camera</string>
+    <string name="gallery_app_select">Select gallery app</string>
+    <string name="need_write_permission">Need permission to get image</string>
+    <string name="choose">select</string>
+    <string name="camera">camera</string>
+    <string name="gallery">gallery</string>
+    <string name="image_cancel">canceled</string>
+    <string name="image_over_select_warning">too much image select</string>
+    <string name="none">none</string>
+</resources>

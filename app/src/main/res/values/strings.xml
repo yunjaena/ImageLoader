@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageLoading</string>
+    <string name="get_image_from_gallery">gallery</string>
+    <string name="get_image_from_camera">camera</string>
+    <string name="get_image_from_gallery_multiple">multiple gallery</string>
+    <string name="show_gallery_or_camera_dialog">dialog</string>
+</resources>

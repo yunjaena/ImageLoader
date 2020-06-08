@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageLoading</string>
+    <string name="get_image_from_gallery">갤러리</string>
+    <string name="get_image_from_camera">카메라</string>
+    <string name="get_image_from_gallery_multiple">갤러리 여러장</string>
+    <string name="show_gallery_or_camera_dialog">선택 다이얼로그</string>
+</resources>

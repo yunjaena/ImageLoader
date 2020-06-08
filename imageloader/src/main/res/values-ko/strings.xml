@@ -1,0 +1,16 @@
+<resources>
+    <string name="saved_failed">저장에 실패했습니다.</string>
+    <string name="need_write_permission_title">쓰기 권한</string>
+    <string name="okay">확인</string>
+    <string name="cancel">취소</string>
+    <string name="select">선택</string>
+    <string name="select_gallery_or_camera">갤러리 또는 카메라를 선택해주세요.</string>
+    <string name="gallery_app_select">앱을 선택해주세요.</string>
+    <string name="need_write_permission">해당 기능을 사용하기 위해 쓰기 권한이 필요합니다.</string>
+    <string name="choose">선택</string>
+    <string name="camera">카메라</string>
+    <string name="gallery">갤러리</string>
+    <string name="image_cancel">취소 되었습니다.</string>
+    <string name="image_over_select_warning">이미지를 많이 선택하셨습니다.</string>
+    <string name="none">없음</string>
+</resources>
