@@ -24,5 +24,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':imageloader')
+    /* Dependency - AndroidX Jetpack */
+    api project.androidxAppCompat
+    api project.androidxMaterial
+
+    /* Dependency - JUnit */
+    testImplementation project.junit
+
+    /* Dependency - Espresso */
+    androidTestImplementation project.espressoCore
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+
+    implementation 'com.yunjaena.imageloader:imageloader:0.0.1'
 }

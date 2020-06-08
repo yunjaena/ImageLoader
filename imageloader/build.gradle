@@ -116,3 +116,16 @@ dependencies {
     androidTestImplementation project.espressoCore
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
 }
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+task findConventions {
+    println project.getConvention()
+}
