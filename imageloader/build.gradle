@@ -1,14 +1,94 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+group = rootProject.ext.packageName
+version = rootProject.ext.libraryVersionName
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name project.name
+            description rootProject.ext.description
+            url rootProject.ext.websiteUrl
+            inceptionYear '2020.06.08'
+
+            packaging 'aar'
+            groupId rootProject.ext.packageName
+            artifactId project.name
+            version rootProject.ext.libraryVersionName
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            scm {
+                connection rootProject.ext.gitHubRepoUrl
+                developerConnection rootProject.ext.gitHubRepoUrl
+                url rootProject.ext.websiteUrl
+            }
+
+            developers {
+                developer {
+                    id 'yunjaena'
+                    name 'yunjaena'
+                    email 'yunjaena@gmail.com'
+                }
+            }
+        }
+    }
+}
+
+
+bintray {
+    Properties properties = new Properties()
+    InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream() ;
+    properties.load( inputStream )
+    user = properties.getProperty('bintrayUser')
+    key = properties.getProperty('bintrayApiKey')
+
+//    publications = ['mavenJava']  // When uploading Maven-based publication files
+    configurations = ['archives'] // When uploading configuration files
+    publish = true
+
+    pkg {
+        repo = rootProject.ext.repositoryName
+        name = project.name
+        userOrg = user
+        desc = rootProject.ext.description
+        licenses = ['Apache-2.0']
+
+        vcsUrl = rootProject.ext.gitHubRepoUrl
+        websiteUrl = rootProject.ext.websiteUrl
+
+        labels = ['aar', 'android', 'image-loader']
+        publicDownloadNumbers = true
+
+        githubRepo = rootProject.ext.githubRepo
+        githubReleaseNotesFile = rootProject.ext.githubReleaseNotesFile
+
+        version {
+            name = rootProject.ext.libraryVersionName
+            desc = rootProject.ext.description
+            released = new Date()
+            vcsTag = rootProject.ext.libraryVersionName
+        }
+    }
+}
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion project.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
+        versionCode project.versionCode
+        versionName project.libraryVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -25,8 +105,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    testImplementation 'junit:junit:4.12'
+    /* Dependency - AndroidX Jetpack */
+    api project.androidxAppCompat
+    api project.androidxMaterial
+
+    /* Dependency - JUnit */
+    testImplementation project.junit
+
+    /* Dependency - Espresso */
+    androidTestImplementation project.espressoCore
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
