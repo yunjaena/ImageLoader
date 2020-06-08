@@ -35,5 +35,6 @@ dependencies {
     androidTestImplementation project.espressoCore
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
 
-    implementation 'com.yunjaena.imageloader:imageloader:0.0.1'
+    //implementation 'com.yunjaena.imageloader:imageloader:0.0.2'
+    implementation project(path: ':imageloader')
 }

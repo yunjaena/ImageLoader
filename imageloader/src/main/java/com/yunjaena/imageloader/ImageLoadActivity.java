@@ -312,7 +312,7 @@ public class ImageLoadActivity extends AppCompatActivity {
                 Uri photoURI;
                 if ((Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT))
                     photoURI = FileProvider.getUriForFile(this,
-                            "com.yunjaena.imageloader.provider",
+                            getPackageName()+".imageloader.provider",
                             photoFile);
                 else
                     photoURI = Uri.fromFile(photoFile);

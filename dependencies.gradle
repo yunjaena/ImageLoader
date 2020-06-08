@@ -4,8 +4,8 @@ ext {
     targetSdkVersion = 29
     minSdkVersion = 19
 
-    versionCode = 0000001
-    libraryVersionName = '0.0.1'
+    versionCode = 0000004
+    libraryVersionName = '0.0.4'
 
     repositoryName = 'image-loader'
     packageName = 'com.yunjaena.imageloader'
