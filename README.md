@@ -126,7 +126,7 @@ ImageLoader.with(context)
            .setChangeImageSize(true)
            .setImageHeight(500)
            .setImageWidth(500)
-           .showGalleryOrCameraSelectDialog();
+           .getImageFromGallery();
 ```
 
 ## ImageFailedType
