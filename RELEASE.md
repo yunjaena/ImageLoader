@@ -14,3 +14,6 @@
 
 ## v.0.0.4
 -  Add custom file provider
+
+## v.0.0.5
+-  Remove library color resource

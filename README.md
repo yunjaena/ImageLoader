@@ -17,7 +17,7 @@ Easily load image from gallery and camera
 </p>
 
 ## Setting
-[ ![Download](https://api.bintray.com/packages/yunjaena/image-loader/imageloader/images/download.svg?version=0.0.4) ](https://bintray.com/yunjaena/image-loader/imageloader/0.0.4/link)
+[ ![Download](https://api.bintray.com/packages/yunjaena/image-loader/imageloader/images/download.svg?version=0.0.5) ](https://bintray.com/yunjaena/image-loader/imageloader/0.0.5/link)
 
 ### Gradle
 Add below codes into `build.gradle` root project
@@ -34,7 +34,7 @@ Add below codes into `build.gradle` your module
 
 ```gradle
 dependencies {
-    implementation 'com.yunjaena.imageloader:imageloader:0.0.4'
+    implementation 'com.yunjaena.imageloader:imageloader:0.0.5'
 }
 ```
 
@@ -154,6 +154,9 @@ ImageLoader.with(context)
 
 ### v.0.0.4
 -  Add custom file provider
+
+### v.0.0.5
+-  Remove library color resource
 
 ## Future feature
 - Support RxJava
